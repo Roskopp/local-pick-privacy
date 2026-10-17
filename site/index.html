@@ -150,7 +150,7 @@
 
   /* ---- Screenshots ---- */
   .shots-grid{
-    display:grid; grid-template-columns:1fr; gap:32px; margin-top:44px;
+    display:grid; grid-template-columns:repeat(2,1fr); gap:32px 16px; margin-top:44px;
   }
   .shot-card{text-align:center;}
   .shot-frame{
@@ -158,6 +158,7 @@
     border:6px solid var(--green-dark); background:var(--green-dark);
     max-width:230px; margin:0 auto 18px;
   }
+  .shot-frame img{width:100%; aspect-ratio:14/25; object-fit:cover; object-position:top;}
   .shot-card h3{font-size:16px; margin-bottom:4px;}
   .shot-card p{color:var(--muted); font-size:13.5px; max-width:220px; margin:0 auto;}
 
@@ -177,12 +178,15 @@
     .signup-row{flex-wrap:nowrap;}
     .about{grid-template-columns:1.1fr 0.9fr;}
     .features-grid{grid-template-columns:repeat(2,1fr);}
-    .shots-grid{grid-template-columns:repeat(4,1fr);}
+    .shots-grid{grid-template-columns:repeat(4,1fr); gap:44px 32px;}
   }
   @media(max-width:759px){
     .nav-links{gap:0;}
     .nav-links a:not(.btn){display:none;}
     section{padding:64px 0;}
+    .shot-frame{border-width:4px; border-radius:20px; margin-bottom:12px;}
+    .shot-card h3{font-size:14px;}
+    .shot-card p{font-size:12.5px;}
   }
 </style>
 </head>
@@ -303,19 +307,39 @@
           <p>See what's growing on your street, not just across town.</p>
         </div>
         <div class="shot-card">
-          <div class="shot-frame"><img src="assets/shot-detail.jpg" alt="Detail view of a lime tree location"></div>
+          <div class="shot-frame"><img src="assets/shot-filters.jpg" alt="Filters for category, ripeness, land type and rating" loading="lazy"></div>
+          <h3>Find exactly what you want</h3>
+          <p>Filter by fruit, herb or nut, ripeness, land type, and more.</p>
+        </div>
+        <div class="shot-card">
+          <div class="shot-frame"><img src="assets/shot-detail.jpg" alt="Detail view of a lime tree location" loading="lazy"></div>
           <h3>Rich local detail</h3>
           <p>Ratings, ripeness, land type, and real photos for every spot.</p>
         </div>
         <div class="shot-card">
-          <div class="shot-frame"><img src="assets/shot-stats.jpg" alt="Contribution stats and achievement badges"></div>
-          <h3>Track your contributions</h3>
-          <p>Unlock badges as you add, verify, and share finds.</p>
+          <div class="shot-frame"><img src="assets/shot-add.jpg" alt="Add plant form with species, land type, rating, notes and photo" loading="lazy"></div>
+          <h3>Share a find</h3>
+          <p>Add a tree in seconds with notes, a rating, and a photo.</p>
         </div>
         <div class="shot-card">
-          <div class="shot-frame"><img src="assets/shot-profile.jpg" alt="User profile with saved places"></div>
+          <div class="shot-frame"><img src="assets/shot-alerts.jpg" alt="Ripeness alerts for favourited plants" loading="lazy"></div>
+          <h3>Ripeness alerts</h3>
+          <p>Get told when a tree you've favourited is ready to pick.</p>
+        </div>
+        <div class="shot-card">
+          <div class="shot-frame"><img src="assets/shot-favourites.jpg" alt="Favourite plants with personal notes" loading="lazy"></div>
+          <h3>Save your favourites</h3>
+          <p>Keep your go-to trees handy, with your own personal notes.</p>
+        </div>
+        <div class="shot-card">
+          <div class="shot-frame"><img src="assets/shot-profile.jpg" alt="User profile with saved places" loading="lazy"></div>
           <h3>Your own patch</h3>
           <p>Keep tabs on every place you've found, ripe or not.</p>
+        </div>
+        <div class="shot-card">
+          <div class="shot-frame"><img src="assets/shot-stats.jpg" alt="Contribution stats and challenges" loading="lazy"></div>
+          <h3>Track your contributions</h3>
+          <p>Complete challenges as you add, verify, and share finds.</p>
         </div>
       </div>
     </div>
