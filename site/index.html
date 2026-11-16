@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // Arrived from a sign-up confirmation email (Supabase sends people to the
+  // site's address with ?code=… / #access_token=…, or ?error=… for a used or
+  // old link): show the "email confirmed" page instead of the homepage.
+  (function () {
+    var s = window.location.search, h = window.location.hash;
+    if (/[?&](code|error|error_code)=/.test(s) ||
+        /(^#|&)(access_token|error|error_code)=/.test(h)) {
+      window.location.replace('/email-confirmed' + s + h);
+    }
+  })();
+</script>
 <title>Local Pick — Community Foraging Map</title>
 <meta name="description" content="Local Pick is a community-powered map for foragers to discover and share edible plants near them. Coming soon to iOS and Android.">
 <link rel="canonical" href="https://local-pick.com/">
