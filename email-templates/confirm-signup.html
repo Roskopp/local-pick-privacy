@@ -1,0 +1,47 @@
+<!--
+  Supabase → Authentication → Emails → Templates → "Confirm signup".
+  Subject: Confirm your email for Local Pick
+
+  The button links to local-pick.com (not supabase.co): a link to a
+  different, random-looking domain from the sender is a strong spam signal.
+  local-pick.com/email-confirmed confirms the token itself (see that page's
+  script). {{ .TokenHash }} is filled in by Supabase.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confirm your email for Local Pick</title>
+</head>
+<body style="margin:0; padding:0; background:#EFF3E6; font-family:Arial, Helvetica, sans-serif; color:#262B20;">
+  <!-- Preview text shown in the inbox list. -->
+  <div style="display:none; max-height:0; overflow:hidden;">One tap to finish setting up your Local Pick account.</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EFF3E6; padding:32px 12px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:520px; background:#FFFFFF; border:1px solid #DCE2CC; border-radius:20px;">
+          <tr>
+            <td style="padding:28px 32px 8px; text-align:center;">
+              <img src="https://local-pick.com/assets/logo.png" width="56" height="56" alt="Local Pick" style="border-radius:12px; display:inline-block;">
+              <h1 style="font-size:22px; line-height:1.3; color:#20281C; margin:16px 0 8px;">Confirm your email</h1>
+              <p style="font-size:16px; line-height:1.6; margin:0 0 20px;">Thanks for joining Local Pick! Tap the button below to confirm this is your email address and finish setting up your account.</p>
+              <a href="https://local-pick.com/email-confirmed?token_hash={{ .TokenHash }}&amp;type=email"
+                 style="display:inline-block; background:#3F5D37; color:#FFFFFF; text-decoration:none; font-weight:bold; font-size:16px; padding:14px 30px; border-radius:999px;">Confirm my email</a>
+              <p style="font-size:14px; line-height:1.6; color:#6E7460; margin:22px 0 0;">Then go back to the Local Pick app and log in.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:20px 32px 28px; text-align:center;">
+              <p style="font-size:13px; line-height:1.6; color:#6E7460; margin:0 0 8px;">Button not working? Copy this link into your browser:<br>
+                <a href="https://local-pick.com/email-confirmed?token_hash={{ .TokenHash }}&amp;type=email" style="color:#3F5D37; word-break:break-all;">https://local-pick.com/email-confirmed?token_hash={{ .TokenHash }}&amp;type=email</a></p>
+              <p style="font-size:13px; line-height:1.6; color:#6E7460; margin:0;">Didn't sign up for Local Pick? You can ignore this email; no account will be activated.</p>
+            </td>
+          </tr>
+        </table>
+        <p style="font-size:12px; color:#6E7460; margin:16px 0 0;">Local Pick · Find free fruit, nuts and herbs near you · <a href="https://local-pick.com" style="color:#3F5D37;">local-pick.com</a></p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

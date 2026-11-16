@@ -64,6 +64,21 @@
 <main class="wrap">
   <div class="card">
 
+    <!-- Arrived from the branded email: confirming with Supabase. -->
+    <div class="state" id="checking">
+      <div class="icon" aria-hidden="true">✉️</div>
+      <h1>Confirming your email…</h1>
+      <p class="muted">This only takes a moment.</p>
+    </div>
+
+    <!-- Couldn't reach Supabase to confirm (offline, blocked). -->
+    <div class="state" id="failed">
+      <div class="icon" aria-hidden="true">📶</div>
+      <h1>We couldn't confirm that just now</h1>
+      <p>Check your connection and tap the link in the email again.</p>
+      <p class="muted">Still stuck? Email <a href="mailto:hello@local-pick.com">hello@local-pick.com</a>.</p>
+    </div>
+
     <!-- Arrived from the confirmation email: the account is confirmed. -->
     <div class="state" id="confirmed">
       <div class="icon" aria-hidden="true">✅</div>
@@ -102,14 +117,50 @@
 
 <script>
 (function () {
-  // Supabase sends people here after they tap the link in the sign-up
-  // confirmation email, with ?code=… (or #access_token=…), or ?error=… /
-  // #error=… when the link was already used or is too old. The account is
-  // confirmed by then; there's nothing to exchange here (the person logs in
-  // in the app), so the code is just removed from the address bar.
+  // Two ways to arrive from the sign-up email:
+  //  - The branded email (Supabase template "Confirm signup") links here
+  //    with ?token_hash=…&type=email, so the link is on local-pick.com, not
+  //    supabase.co (a mismatched link domain sends mail to junk). This page
+  //    confirms it with Supabase's verify endpoint, using the public key the
+  //    app itself ships with; the session it returns isn't kept (the person
+  //    logs in in the app).
+  //  - Supabase's own default link verifies first and sends people here with
+  //    ?code=… / #access_token=…, or ?error=… when it's used or too old.
+  // Either way the code is then removed from the address bar.
+  var SUPABASE_URL = 'https://sgdttqsgqijwmrwdbhiq.supabase.co';
+  var PUBLIC_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNnZHR0cXNncWlqd21yd2RiaGlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMyMjg4MzUsImV4cCI6MjA5ODgwNDgzNX0.MeLy5A27hjSOtzwZ8pt_JeJpud_yfQu79kKL5D0UK2U';
+
   var params = new URLSearchParams(window.location.search);
   var hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
-  function show(id) { document.getElementById(id).classList.add('show'); }
+  function show(id) {
+    var states = document.querySelectorAll('.state');
+    for (var i = 0; i < states.length; i++) states[i].classList.remove('show');
+    document.getElementById(id).classList.add('show');
+  }
+  function tidyAddress() {
+    if (window.location.search || window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+  }
+
+  var tokenHash = params.get('token_hash');
+  if (tokenHash) {
+    var type = params.get('type') || 'email';
+    show('checking');
+    tidyAddress();
+    fetch(SUPABASE_URL + '/auth/v1/verify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': PUBLIC_KEY },
+      body: JSON.stringify({ type: type, token_hash: tokenHash })
+    }).then(function (res) {
+      // 2xx: confirmed. A 4xx means the link was used already or is too
+      // old (Supabase says otp_expired / invalid either way).
+      show(res.ok ? 'confirmed' : (res.status >= 400 && res.status < 500 ? 'expired' : 'failed'));
+    }).catch(function () {
+      show('failed');
+    });
+    return;
+  }
 
   if (params.get('error') || params.get('error_code') ||
       hashParams.get('error') || hashParams.get('error_code')) {
@@ -119,9 +170,7 @@
   } else {
     show('nolink');
   }
-  if (window.location.search || window.location.hash) {
-    history.replaceState(null, '', window.location.pathname);
-  }
+  tidyAddress();
 })();
 </script>
 </body>
