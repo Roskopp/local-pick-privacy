@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foraging Maps for NZ &amp; Australian Cities | Local Pick</title>
+<meta name="description" content="Free fruit trees, nut trees, herbs and drinking water in 22 cities across New Zealand and Australia, from Auckland to Perth. Find foraging spots near you.">
+<link rel="canonical" href="https://local-pick.com/foraging/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Local Pick">
+<meta property="og:url" content="https://local-pick.com/foraging/">
+<meta property="og:title" content="Foraging Maps for NZ &amp; Australian Cities | Local Pick">
+<meta property="og:description" content="Free fruit trees, nut trees, herbs and drinking water in 22 cities across New Zealand and Australia, from Auckland to Perth. Find foraging spots near you.">
+<meta property="og:image" content="https://local-pick.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3F5D37">
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/worksans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{font-family:'Sora';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/sora-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  @font-face{font-family:'Sora';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/sora-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/worksans-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/worksans-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  :root{--cream:#EFF3E6;--cream-deep:#E5EAD6;--card:#fff;--green:#3F5D37;--green-dark:#20281C;--gold:#CE8A15;--ink:#262B20;--muted:#6E7460;--border:#DCE2CC;--shadow:0 10px 30px rgba(32,40,28,0.10);--radius-md:18px;--radius-sm:12px;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Work Sans',system-ui,sans-serif;line-height:1.6;}
+  h1,h2,h3{font-family:'Sora',system-ui,sans-serif;color:var(--green-dark);line-height:1.2;margin:0 0 .5em;}
+  h1{font-size:40px;font-weight:800;}
+  h2{font-size:26px;margin-top:8px;}
+  h3{font-size:17px;margin:0 0 4px;}
+  p{margin:0 0 1em;}
+  a{color:var(--green);}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--green-dark);outline-offset:3px;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  header.site-nav{position:sticky;top:0;z-index:20;background:rgba(239,243,230,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .nav-brand{display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:700;font-size:18px;color:var(--green-dark);text-decoration:none;}
+  .nav-brand img{width:34px;height:34px;border-radius:9px;}
+  .nav-links{display:flex;align-items:center;gap:24px;}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;}
+  .btn-primary{background:var(--green);color:#fff !important;}
+  .btn-primary:hover{background:var(--green-dark);}
+  .btn-sm{padding:9px 18px;font-size:14px;}
+  .crumbs{font-size:13.5px;color:var(--muted);margin:28px 0 10px;}
+  .crumbs a{color:var(--muted);}
+  .lede{font-size:18px;color:var(--muted);max-width:680px;}
+  section{padding:36px 0;}
+  .alt{background:var(--cream-deep);}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 8px;}
+  .stat{background:var(--card);border-radius:var(--radius-md);padding:18px;box-shadow:var(--shadow);text-align:center;}
+  .stat b{display:block;font-family:'Sora',sans-serif;font-weight:800;font-size:28px;color:var(--green);line-height:1.15;}
+  .stat span{color:var(--muted);font-size:14px;}
+  .cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px;}
+  .card{background:var(--card);border-radius:var(--radius-md);padding:18px 20px;box-shadow:var(--shadow);}
+  .card .count{float:right;font-family:'Sora',sans-serif;font-weight:700;color:var(--green);font-size:15px;}
+  .card p{color:var(--muted);font-size:14.5px;margin:0 0 6px;}
+  .card p.when{color:var(--ink);}
+  .card .sci{font-style:italic;color:var(--muted);font-size:13px;margin-bottom:6px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none;}
+  .chips li a,.chips li span{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--green-dark);text-decoration:none;}
+  .chips li a:hover{border-color:var(--green);}
+  .season{background:var(--card);border-radius:var(--radius-md);box-shadow:var(--shadow);padding:20px 22px;margin-top:16px;}
+  .season.now{outline:3px solid var(--gold);}
+  .season .badge{display:none;margin-left:8px;background:var(--gold);color:#fff;border-radius:999px;padding:2px 10px;font-size:12px;font-family:'Work Sans',sans-serif;vertical-align:middle;}
+  .season.now .badge{display:inline-block;}
+  .season .months{color:var(--muted);font-size:14px;margin:-4px 0 6px;}
+  .season .chips li a,.season .chips li span{background:var(--cream);}
+  .cta{background:var(--green-dark);color:#EFF3E6;border-radius:var(--radius-md);padding:28px;text-align:center;margin:8px 0;}
+  .cta h2{color:#fff;}
+  .cta p{color:#D8DFC8;}
+  .cta .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .cta .btn-primary{background:#EFF3E6;color:var(--green-dark) !important;}
+  .tips li{margin-bottom:8px;}
+  .note{font-size:13px;color:var(--muted);}
+  footer{padding:32px 0 28px;border-top:1px solid var(--border);text-align:center;}
+  footer p{color:var(--muted);font-size:13px;margin:0 0 10px;}
+  footer a{color:var(--green);text-decoration:none;font-weight:500;}
+  @media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr);}.cards{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:759px){h1{font-size:32px;}.nav-links a:not(.btn){display:none;}.lede{font-size:16.5px;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Local Pick","item":"https://local-pick.com/"},{"@type":"ListItem","position":2,"name":"Foraging by city","item":"https://local-pick.com/foraging/"}]}]}
+</script>
+</head>
+<body>
+<!-- Generated by tools/seo-pages/build.js. Edit the generator, not this file. -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/"><img src="/assets/logo-160.webp" alt="" width="160" height="160">Local Pick</a>
+    <nav class="nav-links">
+      <a href="/foraging/">Cities</a>
+      <a href="/in-season">In season</a>
+      <a class="btn btn-primary btn-sm" id="nav-get-app" href="https://play.google.com/store/apps/details?id=com.localpick.app" target="_blank" rel="noopener">Get the app</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap"><p class="crumbs"><a href="/">Home</a> › Foraging by city</p></div>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h1>Foraging by city</h1>
+      <p class="lede">Local Pick maps 46,512 free fruit trees, nut trees and herbs across these cities in New Zealand and Australia, plus public drinking water and community gardens. Pick your city to see what grows there and when it’s ripe.</p>
+      <h2>New Zealand</h2>
+      <div class="cards">
+        <a class="card" href="/foraging/christchurch" style="text-decoration:none">
+          <span class="count">4,451</span>
+          <h3>Christchurch</h3>
+          <p>cherry plum, elderberry and fennel &middot; 333 water spots</p>
+        </a>
+        <a class="card" href="/foraging/auckland" style="text-decoration:none">
+          <span class="count">2,361</span>
+          <h3>Auckland</h3>
+          <p>feijoa, lemon and rosemary &middot; 637 water spots</p>
+        </a>
+        <a class="card" href="/foraging/wellington" style="text-decoration:none">
+          <span class="count">1,244</span>
+          <h3>Wellington</h3>
+          <p>feijoa, fennel and cherry plum &middot; 181 water spots</p>
+        </a>
+        <a class="card" href="/foraging/napier-hastings" style="text-decoration:none">
+          <span class="count">795</span>
+          <h3>Napier and Hastings</h3>
+          <p>cherry plum, walnut and black walnut &middot; 32 water spots</p>
+        </a>
+        <a class="card" href="/foraging/queenstown" style="text-decoration:none">
+          <span class="count">695</span>
+          <h3>Queenstown</h3>
+          <p>chestnut, walnut and cherry plum &middot; 14 water spots</p>
+        </a>
+        <a class="card" href="/foraging/tauranga" style="text-decoration:none">
+          <span class="count">655</span>
+          <h3>Tauranga</h3>
+          <p>walnut, avocado and black walnut &middot; 126 water spots</p>
+        </a>
+        <a class="card" href="/foraging/hamilton" style="text-decoration:none">
+          <span class="count">408</span>
+          <h3>Hamilton</h3>
+          <p>cherry plum, chestnut and feijoa &middot; 49 water spots</p>
+        </a>
+        <a class="card" href="/foraging/rotorua" style="text-decoration:none">
+          <span class="count">237</span>
+          <h3>Rotorua</h3>
+          <p>cherry plum, walnut and feijoa &middot; 38 water spots</p>
+        </a>
+        <a class="card" href="/foraging/nelson" style="text-decoration:none">
+          <span class="count">213</span>
+          <h3>Nelson</h3>
+          <p>blackberry, elderberry and bay leaf &middot; 64 water spots</p>
+        </a>
+        <a class="card" href="/foraging/dunedin" style="text-decoration:none">
+          <span class="count">158</span>
+          <h3>Dunedin</h3>
+          <p>cherry plum, elderberry and fennel &middot; 44 water spots</p>
+        </a>
+      </div>
+      <div style="height:28px"></div>
+      <h2>Australia</h2>
+      <div class="cards">
+        <a class="card" href="/foraging/melbourne" style="text-decoration:none">
+          <span class="count">13,577</span>
+          <h3>Melbourne</h3>
+          <p>cherry plum, loquat and plum &middot; 2,447 water spots</p>
+        </a>
+        <a class="card" href="/foraging/canberra" style="text-decoration:none">
+          <span class="count">6,403</span>
+          <h3>Canberra</h3>
+          <p>cherry plum, black walnut and pinenut &middot; 367 water spots</p>
+        </a>
+        <a class="card" href="/foraging/perth" style="text-decoration:none">
+          <span class="count">3,660</span>
+          <h3>Perth</h3>
+          <p>cherry plum, white mulberry and lemon &middot; 771 water spots</p>
+        </a>
+        <a class="card" href="/foraging/adelaide" style="text-decoration:none">
+          <span class="count">3,326</span>
+          <h3>Adelaide</h3>
+          <p>cherry plum, blackberry and fennel &middot; 571 water spots</p>
+        </a>
+        <a class="card" href="/foraging/sydney" style="text-decoration:none">
+          <span class="count">2,598</span>
+          <h3>Sydney</h3>
+          <p>cherry plum, passionfruit and fennel &middot; 2,338 water spots</p>
+        </a>
+        <a class="card" href="/foraging/bendigo" style="text-decoration:none">
+          <span class="count">2,324</span>
+          <h3>Bendigo</h3>
+          <p>cherry plum, apple and white mulberry &middot; 22 water spots</p>
+        </a>
+        <a class="card" href="/foraging/geelong" style="text-decoration:none">
+          <span class="count">1,132</span>
+          <h3>Geelong</h3>
+          <p>cherry plum, loquat and fennel &middot; 163 water spots</p>
+        </a>
+        <a class="card" href="/foraging/launceston" style="text-decoration:none">
+          <span class="count">746</span>
+          <h3>Launceston</h3>
+          <p>cherry plum, almond and loquat &middot; 17 water spots</p>
+        </a>
+        <a class="card" href="/foraging/brisbane" style="text-decoration:none">
+          <span class="count">510</span>
+          <h3>Brisbane</h3>
+          <p>mango, macadamia and passionfruit &middot; 3,140 water spots</p>
+        </a>
+        <a class="card" href="/foraging/ballarat" style="text-decoration:none">
+          <span class="count">493</span>
+          <h3>Ballarat</h3>
+          <p>cherry plum, pinenut and black walnut &middot; 96 water spots</p>
+        </a>
+        <a class="card" href="/foraging/newcastle" style="text-decoration:none">
+          <span class="count">381</span>
+          <h3>Newcastle</h3>
+          <p>cherry plum, fennel and macadamia &middot; 246 water spots</p>
+        </a>
+        <a class="card" href="/foraging/gold-coast" style="text-decoration:none">
+          <span class="count">145</span>
+          <h3>Gold Coast</h3>
+          <p>mango, passionfruit and guava &middot; 764 water spots</p>
+        </a>
+      </div>
+      <p class="note" style="margin-top:20px">Numbers count spots within a short drive of each city centre, November 2026. Smaller towns are on the map too.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <h2>Find them on the map</h2>
+        <p>Local Pick shows every spot on a live map, with ripeness updates from local foragers, photos and ratings. It’s free.</p>
+        <div class="row">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.localpick.app" target="_blank" rel="noopener">Get it on Google Play</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="/">Local Pick</a> &middot; <a href="/foraging/">Foraging by city</a> &middot; <a href="/in-season">What’s in season</a> &middot; <a href="/#faq">FAQ</a></p>
+    <p>Follow Local Pick: <a href="https://www.instagram.com/localpickapp/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/yourlocalpickapp" target="_blank" rel="noopener">Facebook</a> &middot; <a href="mailto:hello@local-pick.com">hello@local-pick.com</a></p>
+    <p>&copy; 2026 Local Pick &middot; <a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms of Service</a></p>
+  </div>
+</footer>
+</body>
+</html>

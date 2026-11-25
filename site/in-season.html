@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What’s in Season? Foraging Calendar for NZ &amp; Australia | Local Pick</title>
+<meta name="description" content="A seasonal foraging calendar for New Zealand and Australia: which fruit, nuts and herbs are ripe in spring, summer, autumn and winter, and how to tell when they’re ready to pick.">
+<link rel="canonical" href="https://local-pick.com/in-season">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Local Pick">
+<meta property="og:url" content="https://local-pick.com/in-season">
+<meta property="og:title" content="What’s in Season? Foraging Calendar for NZ &amp; Australia | Local Pick">
+<meta property="og:description" content="A seasonal foraging calendar for New Zealand and Australia: which fruit, nuts and herbs are ripe in spring, summer, autumn and winter, and how to tell when they’re ready to pick.">
+<meta property="og:image" content="https://local-pick.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3F5D37">
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/worksans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{font-family:'Sora';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/sora-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  @font-face{font-family:'Sora';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/sora-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/worksans-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/worksans-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  :root{--cream:#EFF3E6;--cream-deep:#E5EAD6;--card:#fff;--green:#3F5D37;--green-dark:#20281C;--gold:#CE8A15;--ink:#262B20;--muted:#6E7460;--border:#DCE2CC;--shadow:0 10px 30px rgba(32,40,28,0.10);--radius-md:18px;--radius-sm:12px;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Work Sans',system-ui,sans-serif;line-height:1.6;}
+  h1,h2,h3{font-family:'Sora',system-ui,sans-serif;color:var(--green-dark);line-height:1.2;margin:0 0 .5em;}
+  h1{font-size:40px;font-weight:800;}
+  h2{font-size:26px;margin-top:8px;}
+  h3{font-size:17px;margin:0 0 4px;}
+  p{margin:0 0 1em;}
+  a{color:var(--green);}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--green-dark);outline-offset:3px;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  header.site-nav{position:sticky;top:0;z-index:20;background:rgba(239,243,230,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .nav-brand{display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:700;font-size:18px;color:var(--green-dark);text-decoration:none;}
+  .nav-brand img{width:34px;height:34px;border-radius:9px;}
+  .nav-links{display:flex;align-items:center;gap:24px;}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;}
+  .btn-primary{background:var(--green);color:#fff !important;}
+  .btn-primary:hover{background:var(--green-dark);}
+  .btn-sm{padding:9px 18px;font-size:14px;}
+  .crumbs{font-size:13.5px;color:var(--muted);margin:28px 0 10px;}
+  .crumbs a{color:var(--muted);}
+  .lede{font-size:18px;color:var(--muted);max-width:680px;}
+  section{padding:36px 0;}
+  .alt{background:var(--cream-deep);}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 8px;}
+  .stat{background:var(--card);border-radius:var(--radius-md);padding:18px;box-shadow:var(--shadow);text-align:center;}
+  .stat b{display:block;font-family:'Sora',sans-serif;font-weight:800;font-size:28px;color:var(--green);line-height:1.15;}
+  .stat span{color:var(--muted);font-size:14px;}
+  .cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px;}
+  .card{background:var(--card);border-radius:var(--radius-md);padding:18px 20px;box-shadow:var(--shadow);}
+  .card .count{float:right;font-family:'Sora',sans-serif;font-weight:700;color:var(--green);font-size:15px;}
+  .card p{color:var(--muted);font-size:14.5px;margin:0 0 6px;}
+  .card p.when{color:var(--ink);}
+  .card .sci{font-style:italic;color:var(--muted);font-size:13px;margin-bottom:6px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none;}
+  .chips li a,.chips li span{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--green-dark);text-decoration:none;}
+  .chips li a:hover{border-color:var(--green);}
+  .season{background:var(--card);border-radius:var(--radius-md);box-shadow:var(--shadow);padding:20px 22px;margin-top:16px;}
+  .season.now{outline:3px solid var(--gold);}
+  .season .badge{display:none;margin-left:8px;background:var(--gold);color:#fff;border-radius:999px;padding:2px 10px;font-size:12px;font-family:'Work Sans',sans-serif;vertical-align:middle;}
+  .season.now .badge{display:inline-block;}
+  .season .months{color:var(--muted);font-size:14px;margin:-4px 0 6px;}
+  .season .chips li a,.season .chips li span{background:var(--cream);}
+  .cta{background:var(--green-dark);color:#EFF3E6;border-radius:var(--radius-md);padding:28px;text-align:center;margin:8px 0;}
+  .cta h2{color:#fff;}
+  .cta p{color:#D8DFC8;}
+  .cta .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .cta .btn-primary{background:#EFF3E6;color:var(--green-dark) !important;}
+  .tips li{margin-bottom:8px;}
+  .note{font-size:13px;color:var(--muted);}
+  footer{padding:32px 0 28px;border-top:1px solid var(--border);text-align:center;}
+  footer p{color:var(--muted);font-size:13px;margin:0 0 10px;}
+  footer a{color:var(--green);text-decoration:none;font-weight:500;}
+  @media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr);}.cards{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:759px){h1{font-size:32px;}.nav-links a:not(.btn){display:none;}.lede{font-size:16.5px;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Local Pick","item":"https://local-pick.com/"},{"@type":"ListItem","position":2,"name":"What’s in season","item":"https://local-pick.com/in-season"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What fruit is in season in New Zealand and Australia right now?","acceptedAnswer":{"@type":"Answer","text":"Check the season highlighted at the top of this page. In spring look for loquats, mulberries and the first citrus; in summer, cherry plums, stone fruit, blackberries and passionfruit; in autumn, feijoas, apples, figs, walnuts and chestnuts; and in winter, citrus such as lemons, mandarins and oranges."}},{"@type":"Question","name":"When are feijoas in season?","acceptedAnswer":{"@type":"Answer","text":"Feijoas are an autumn fruit in most of New Zealand and southern Australia, roughly March to May. In warmer places the season can run from late summer into winter."}},{"@type":"Question","name":"Do seasons differ between cities?","acceptedAnswer":{"@type":"Answer","text":"Yes. Fruit ripens earlier in warmer places like Brisbane, Perth and Auckland than in Melbourne, Christchurch or Dunedin, and the tropical north follows wet and dry seasons instead. Ripeness updates from local foragers in the Local Pick app show what’s ready near you."}}]}]}
+</script>
+</head>
+<body>
+<!-- Generated by tools/seo-pages/build.js. Edit the generator, not this file. -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/"><img src="/assets/logo-160.webp" alt="" width="160" height="160">Local Pick</a>
+    <nav class="nav-links">
+      <a href="/foraging/">Cities</a>
+      <a href="/in-season">In season</a>
+      <a class="btn btn-primary btn-sm" id="nav-get-app" href="https://play.google.com/store/apps/details?id=com.localpick.app" target="_blank" rel="noopener">Get the app</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap"><p class="crumbs"><a href="/">Home</a> › What’s in season</p></div>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h1>What’s in season?</h1>
+      <p class="lede">A foraging calendar for New Zealand and Australia. Find out which fruit, nuts and herbs are ready to pick each season, and how to tell when they’re ripe.</p>
+        <div class="season" data-season="spring" id="spring">
+          <h2>Spring <span class="badge">Now</span></h2>
+          <p class="months">September to November</p>
+          <ul class="chips"><li><a href="#fennel">Fennel</a></li><li><a href="#loquat">Loquat</a></li><li><a href="#lemon">Lemon</a></li><li><a href="#whitemulberry">White Mulberry</a></li><li><a href="#passionfruit">Passionfruit</a></li><li><a href="#elderberry">Elderberry</a></li><li><a href="#rosemary">Rosemary</a></li><li><a href="#mango">Mango</a></li><li><a href="#orange">Orange</a></li><li><a href="#blackmulberry">Black Mulberry</a></li><li><a href="#mint">Mint</a></li><li><a href="#grapefruit">Grapefruit</a></li><li><a href="#mulberry">Mulberry</a></li><li><a href="#peppermint">Peppermint</a></li><li><a href="#tamarind">Tamarind</a></li><li><a href="#strawberry">Strawberry</a></li><li><a href="#basil">Basil</a></li><li><a href="#dill">Dill</a></li><li><a href="#whitesapote">White Sapote</a></li><li><a href="#oregano">Oregano</a></li><li><a href="#cherimoya">Cherimoya</a></li><li><a href="#kumquat">Kumquat</a></li><li><a href="#cashew">Cashew</a></li><li><a href="#blueberry">Blueberry</a></li></ul>
+        </div>
+        <div class="season" data-season="summer" id="summer">
+          <h2>Summer <span class="badge">Now</span></h2>
+          <p class="months">December to February</p>
+          <ul class="chips"><li><a href="#cherryplum">Cherry Plum</a></li><li><a href="#blackberry">Blackberry</a></li><li><a href="#fennel">Fennel</a></li><li><a href="#apple">Apple</a></li><li><a href="#whitemulberry">White Mulberry</a></li><li><a href="#fig">Fig</a></li><li><a href="#plum">Plum</a></li><li><a href="#passionfruit">Passionfruit</a></li><li><a href="#peach">Peach</a></li><li><a href="#elderberry">Elderberry</a></li><li><a href="#almond">Almond</a></li><li><a href="#pear">Pear</a></li><li><a href="#mango">Mango</a></li><li><a href="#avocado">Avocado</a></li><li><a href="#apricot">Apricot</a></li><li><a href="#macadamia">Macadamia</a></li><li><a href="#cherry">Cherry</a></li><li><a href="#orange">Orange</a></li><li><a href="#blackmulberry">Black Mulberry</a></li><li><a href="#banana">Banana</a></li><li><a href="#grape">Grape</a></li><li><a href="#guava">Guava</a></li><li><a href="#lime">Lime</a></li><li><a href="#mint">Mint</a></li><li><a href="#cherryguava">Cherry/Red Guava</a></li><li><a href="#mulberry">Mulberry</a></li><li><a href="#serviceberry">Serviceberry</a></li><li><a href="#gooseberry">Gooseberry</a></li><li><a href="#hazelnut">Hazelnut</a></li><li><a href="#peppermint">Peppermint</a></li><li><a href="#fingerlime">Finger Lime</a></li><li><a href="#nashipear">Nashi/Asian Pear</a></li><li><a href="#olive">Olive</a></li><li><a href="#strawberry">Strawberry</a></li><li><a href="#basil">Basil</a></li><li><a href="#dill">Dill</a></li><li><a href="#sourcherry">Sour Cherry</a></li><li><a href="#oregano">Oregano</a></li><li><a href="#dragonfruit">Dragonfruit</a></li><li><a href="#jackfruit">Jackfruit</a></li><li><a href="#nectarine">Nectarine</a></li><li><a href="#cashew">Cashew</a></li><li><a href="#blueberry">Blueberry</a></li><li><a href="#crabapple">Crabapple</a></li></ul>
+        </div>
+        <div class="season" data-season="autumn" id="autumn">
+          <h2>Autumn <span class="badge">Now</span></h2>
+          <p class="months">March to May</p>
+          <ul class="chips"><li><a href="#blackberry">Blackberry</a></li><li><a href="#fennel">Fennel</a></li><li><a href="#apple">Apple</a></li><li><a href="#fig">Fig</a></li><li><a href="#feijoa">Feijoa</a></li><li><a href="#plum">Plum</a></li><li><a href="#passionfruit">Passionfruit</a></li><li><a href="#elderberry">Elderberry</a></li><li><a href="#chestnut">Chestnut</a></li><li><a href="#walnut">Walnut</a></li><li><a href="#pear">Pear</a></li><li><a href="#blackwalnut">Black Walnut</a></li><li><a href="#macadamia">Macadamia</a></li><li><a href="#pinenut">Pinenut</a></li><li><a href="#mandarin">Mandarin</a></li><li><a href="#banana">Banana</a></li><li><a href="#pomegranate">Pomegranate</a></li><li><a href="#grape">Grape</a></li><li><a href="#guava">Guava</a></li><li><a href="#lime">Lime</a></li><li><a href="#mint">Mint</a></li><li><a href="#quince">Quince</a></li><li><a href="#cherryguava">Cherry/Red Guava</a></li><li><a href="#persimmon">Persimmon</a></li><li><a href="#hazelnut">Hazelnut</a></li><li><a href="#peppermint">Peppermint</a></li><li><a href="#fingerlime">Finger Lime</a></li><li><a href="#pecan">Pecan</a></li><li><a href="#tamarillo">Tamarillo</a></li><li><a href="#nashipear">Nashi/Asian Pear</a></li><li><a href="#japanesewalnut">Japanese Walnut</a></li><li><a href="#olive">Olive</a></li><li><a href="#basil">Basil</a></li><li><a href="#dill">Dill</a></li><li><a href="#goldkiwifruit">Gold Kiwifruit</a></li><li><a href="#whitesapote">White Sapote</a></li><li><a href="#oregano">Oregano</a></li><li><a href="#kiwifruit">Kiwifruit</a></li><li><a href="#cherimoya">Cherimoya</a></li><li><a href="#dragonfruit">Dragonfruit</a></li><li><a href="#jackfruit">Jackfruit</a></li><li><a href="#crabapple">Crabapple</a></li></ul>
+        </div>
+        <div class="season" data-season="winter" id="winter">
+          <h2>Winter <span class="badge">Now</span></h2>
+          <p class="months">June to August</p>
+          <ul class="chips"><li><a href="#loquat">Loquat</a></li><li><a href="#lemon">Lemon</a></li><li><a href="#rosemary">Rosemary</a></li><li><a href="#avocado">Avocado</a></li><li><a href="#macadamia">Macadamia</a></li><li><a href="#orange">Orange</a></li><li><a href="#mandarin">Mandarin</a></li><li><a href="#guava">Guava</a></li><li><a href="#lime">Lime</a></li><li><a href="#grapefruit">Grapefruit</a></li><li><a href="#fingerlime">Finger Lime</a></li><li><a href="#tamarind">Tamarind</a></li><li><a href="#tamarillo">Tamarillo</a></li><li><a href="#olive">Olive</a></li><li><a href="#goldkiwifruit">Gold Kiwifruit</a></li><li><a href="#whitesapote">White Sapote</a></li><li><a href="#cherimoya">Cherimoya</a></li><li><a href="#kumquat">Kumquat</a></li></ul>
+        </div>
+        <div class="season" id="all-year">
+          <h2>All year</h2>
+          <ul class="chips"><li><a href="#bayleaf">Bay Leaf</a></li><li><a href="#curlyparsley">Curly Parsley</a></li><li><a href="#thyme">Thyme</a></li><li><a href="#papaya">Papaya</a></li><li><a href="#currytree">Curry Leaf Tree</a></li><li><a href="#sage">Sage</a></li><li><a href="#coriander">Cilantro</a></li><li><a href="#chives">Chives</a></li></ul>
+        </div>
+      <p class="note" style="margin-top:16px">Seasons are for the temperate south (most of New Zealand and southern Australia). Fruit ripens earlier in warmer areas and later in cooler ones, and the tropical north follows wet and dry seasons.</p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2>Plants A to Z</h2>
+      <p>The 74 most common edible plants on the Local Pick map, with the number of spots mapped in New Zealand and Australia.</p>
+      <div class="cards">
+        <div class="card" id="almond">
+          <span class="count">748 spots</span>
+          <h3>Almond</h3>
+          <div class="sci">Prunus dulcis</div>
+          <p class="when"><strong>Summer:</strong> Ripe in late summer, when the hulls split open.</p>
+          <p><strong>Tip:</strong> Pick almonds when the green outer hull splits open and begins drying on the tree.</p>
+        </div>
+        <div class="card" id="apple">
+          <span class="count">2,447 spots</span>
+          <h3>Apple</h3>
+          <div class="sci">Malus domestica</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe from late summer through autumn, depending on the variety and climate.</p>
+          <p><strong>Tip:</strong> Ripe when fruit is fully coloured, comes off easily with a gentle twist, and seeds are brown.</p>
+        </div>
+        <div class="card" id="apricot">
+          <span class="count">493 spots</span>
+          <h3>Apricot</h3>
+          <div class="sci">Prunus armeniaca</div>
+          <p class="when"><strong>Summer:</strong> Ripe in early to mid summer, a short season of a few weeks per tree.</p>
+          <p><strong>Tip:</strong> Ripe apricots develop a rich golden-orange colour and feel slightly soft to the touch.</p>
+        </div>
+        <div class="card" id="avocado">
+          <span class="count">518 spots</span>
+          <h3>Avocado</h3>
+          <div class="sci">Persea americana</div>
+          <p class="when"><strong>Summer and Winter:</strong> Fruit matures on the tree for months; depending on the variety it is ready somewhere between late winter and summer. It softens after picking.</p>
+          <p><strong>Tip:</strong> Mature fruit should be full-sized and detach easily from the tree.</p>
+        </div>
+        <div class="card" id="banana">
+          <span class="count">217 spots</span>
+          <h3>Banana</h3>
+          <div class="sci">Musa acuminata</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Bunches can ripen year-round in warm climates, with most in summer and autumn. Cut the bunch when the first fingers start to yellow.</p>
+          <p><strong>Tip:</strong> Pick bananas when the fruit is full-sized and the angles on the fingers have rounded out.</p>
+        </div>
+        <div class="card" id="basil">
+          <span class="count">37 spots</span>
+          <h3>Basil</h3>
+          <div class="sci">Ocimum basilicum</div>
+          <p class="when"><strong>Spring, Summer and Autumn:</strong> A warm-season herb, best from late spring to autumn. Pinch off flowers to keep it leafy.</p>
+          <p><strong>Tip:</strong> While the leaves are typically favored for cooking, other parts of the plant can also be utilized.</p>
+        </div>
+        <div class="card" id="bayleaf">
+          <span class="count">500 spots</span>
+          <h3>Bay Leaf</h3>
+          <div class="sci">Laurus nobilis</div>
+          <p class="when"><strong>Spring, Summer, Autumn and Winter:</strong> Leaves can be picked all year round.</p>
+          <p><strong>Tip:</strong> They are used whole, dried, or occasionally ground to flavour dishes.</p>
+        </div>
+        <div class="card" id="blackmulberry">
+          <span class="count">247 spots</span>
+          <h3>Black Mulberry</h3>
+          <div class="sci">Morus nigra</div>
+          <p class="when"><strong>Spring and Summer:</strong> Ripe from late spring into summer.</p>
+          <p><strong>Tip:</strong> Pick when the fruit is deep purple-black, very soft, and comes away from the stem with little effort.</p>
+        </div>
+        <div class="card" id="blackwalnut">
+          <span class="count">539 spots</span>
+          <h3>Black Walnut</h3>
+          <div class="sci">Juglans nigra</div>
+          <p class="when"><strong>Autumn:</strong> Nuts fall in autumn.</p>
+          <p><strong>Tip:</strong> Ready to pick when the husk has yellowed and softened enough that a firm thumb press leaves a lasting dent, often with dark speckling starting to show and a strong walnut smell.</p>
+        </div>
+        <div class="card" id="blackberry">
+          <span class="count">3,843 spots</span>
+          <h3>Blackberry</h3>
+          <div class="sci">Rubus fruticosus</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe from mid summer into early autumn.</p>
+          <p><strong>Tip:</strong> Pick when berries are fully black, plump, and come away easily without resistance.</p>
+        </div>
+        <div class="card" id="blueberry">
+          <span class="count">18 spots</span>
+          <h3>Blueberry</h3>
+          <div class="sci">Vaccinium corymbosum</div>
+          <p class="when"><strong>Spring and Summer:</strong> Ripe from late spring through summer, earlier in warm areas.</p>
+          <p><strong>Tip:</strong> Pick only when berries are fully blue with a matte bloom and detach easily.</p>
+        </div>
+        <div class="card" id="cashew">
+          <span class="count">19 spots</span>
+          <h3>Cashew</h3>
+          <div class="sci">Anacardium occidentale</div>
+          <p class="when"><strong>Spring and Summer:</strong> Ripe in late spring to summer in the tropics. The raw shell is toxic, so it must be roasted before eating.</p>
+          <p><strong>Tip:</strong> Cashew fruits are ripe when the fleshy cashew apple turns bright yellow, orange, or red (depending on the variety) and develops a sweet, fruity aroma.</p>
+        </div>
+        <div class="card" id="cherimoya">
+          <span class="count">26 spots</span>
+          <h3>Cherimoya</h3>
+          <div class="sci">Annona cherimola</div>
+          <p class="when"><strong>Spring, Autumn and Winter:</strong> Ripe from late autumn to spring.</p>
+          <p><strong>Tip:</strong> Pick when the fruit is still firm but slightly yielding and green with a faint yellow tinge.</p>
+        </div>
+        <div class="card" id="cherry">
+          <span class="count">355 spots</span>
+          <h3>Cherry</h3>
+          <div class="sci">Prunus avium</div>
+          <p class="when"><strong>Summer:</strong> Ripe in early to mid summer; a short season.</p>
+          <p><strong>Tip:</strong> Pick when fully coloured (deep/dark red, or yellow depending on variety) and firm but juicy.</p>
+        </div>
+        <div class="card" id="cherryplum">
+          <span class="count">31,113 spots</span>
+          <h3>Cherry Plum</h3>
+          <div class="sci">Prunus cerasifera</div>
+          <p class="when"><strong>Summer:</strong> Cherry plums usually ripen in early to mid summer, a few weeks before most other plums.</p>
+          <p><strong>Tip:</strong> Pick when the fruit is fully coloured (red, purple or yellow depending on the tree), slightly soft, and comes away easily.</p>
+        </div>
+        <div class="card" id="cherryguava">
+          <span class="count">140 spots</span>
+          <h3>Cherry/Red Guava</h3>
+          <div class="sci">Psidium cattleianum</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe in late summer to autumn.</p>
+          <p><strong>Tip:</strong> Pick when fruit turns deep red (or yellow depending on variety) and is slightly soft to the touch with a strong sweet, floral aroma.</p>
+        </div>
+        <div class="card" id="chestnut">
+          <span class="count">842 spots</span>
+          <h3>Chestnut</h3>
+          <div class="sci">Castanea sativa</div>
+          <p class="when"><strong>Autumn:</strong> Nuts fall in autumn when the spiky burrs split open.</p>
+          <p><strong>Tip:</strong> Harvest when the burrs split open naturally and nuts fall or can be easily shaken out.</p>
+        </div>
+        <div class="card" id="chives">
+          <span class="count">15 spots</span>
+          <h3>Chives</h3>
+          <div class="sci">Allium schoenoprasum</div>
+          <p class="when"><strong>Spring, Summer, Autumn and Winter:</strong> Leaves can be picked from spring to autumn; the plant dies back in winter. Flowers appear in late spring and summer.</p>
+          <p><strong>Tip:</strong> The leaves, flowers, and stems of chives are all edible, with the leaves being the most commonly used for their mild onion flavour.</p>
+        </div>
+        <div class="card" id="coriander">
+          <span class="count">21 spots</span>
+          <h3>Cilantro</h3>
+          <div class="sci">Coriandrum sativum</div>
+          <p class="when"><strong>Spring, Summer, Autumn and Winter:</strong> Grows best in the cooler months (autumn to spring); it runs to seed quickly in summer heat.</p>
+          <p><strong>Tip:</strong> The bright green herb grows on a long stem with a delicate, flat flower-like leaf, almost resembling a frilly, large clover.</p>
+        </div>
+        <div class="card" id="crabapple">
+          <span class="count">15 spots</span>
+          <h3>Crabapple</h3>
+          <div class="sci">Malus </div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe in late summer to autumn.</p>
+          <p><strong>Tip:</strong> Crabapples are ready to pick when they have developed their full colour, come away from the tree with a gentle twist, and the seeds inside are dark brown rather than pale.</p>
+        </div>
+        <div class="card" id="curlyparsley">
+          <span class="count">218 spots</span>
+          <h3>Curly Parsley</h3>
+          <div class="sci">Petroselinum crispum</div>
+          <p class="when"><strong>Spring, Summer, Autumn and Winter:</strong> Leaves can be picked most of the year; it goes to seed in its second spring.</p>
+          <p><strong>Tip:</strong> To prepare, rinse the leaves thoroughly, pat dry, and finely chop them.</p>
+        </div>
+        <div class="card" id="currytree">
+          <span class="count">52 spots</span>
+          <h3>Curry Leaf Tree</h3>
+          <div class="sci">Bergera koenigii</div>
+          <p class="when"><strong>Spring, Summer, Autumn and Winter:</strong> Leaves can be picked all year in warm climates; growth slows and some leaves drop in cold winters.</p>
+          <p><strong>Tip:</strong> The fresh leaves are an indispensable part of Indian cuisine and Indian traditional medicines.</p>
+        </div>
+        <div class="card" id="dill">
+          <span class="count">36 spots</span>
+          <h3>Dill</h3>
+          <div class="sci">Anethum graveolens</div>
+          <p class="when"><strong>Spring, Summer and Autumn:</strong> Best from spring to autumn. Leaves are picked young; seeds ripen in summer.</p>
+          <p><strong>Tip:</strong> You can eat virtually the entire dill plant, however the leaves are most commonly used for their bright herbaceous flavour.</p>
+        </div>
+        <div class="card" id="dragonfruit">
+          <span class="count">26 spots</span>
+          <h3>Dragonfruit</h3>
+          <div class="sci">Selenicereus undatus</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Fruits in flushes from summer to autumn.</p>
+          <p><strong>Tip:</strong> Pick when skin colour is vibrant pink or yellow and “flaps” (bracts) are slightly withered but still fresh-looking.</p>
+        </div>
+        <div class="card" id="elderberry">
+          <span class="count">942 spots</span>
+          <h3>Elderberry</h3>
+          <div class="sci">Sambucus nigra</div>
+          <p class="when"><strong>Spring, Summer and Autumn:</strong> Flowers in late spring; berries ripen in late summer to early autumn. Cook the berries before eating.</p>
+          <p><strong>Tip:</strong> Harvest when clusters are fully dark purple-black and all berries in the bunch are ripe.</p>
+        </div>
+        <div class="card" id="feijoa">
+          <span class="count">1,277 spots</span>
+          <h3>Feijoa</h3>
+          <div class="sci">Acca sellowiana</div>
+          <p class="when"><strong>Autumn:</strong> The main season generally occurs in autumn in temperate regions. In warmer climates, the season can extend from late summer into winter.</p>
+          <p><strong>Tip:</strong> Pick when fruits drop naturally or come away with a gentle shake of the tree.</p>
+        </div>
+        <div class="card" id="fennel">
+          <span class="count">2,699 spots</span>
+          <h3>Fennel</h3>
+          <div class="sci">Foeniculum vulgare</div>
+          <p class="when"><strong>Spring, Summer and Autumn:</strong> Leaves and fronds can be picked from spring to autumn; flowers in summer and seeds ripen in late summer to autumn.</p>
+          <p><strong>Tip:</strong> Big white bulb with green stalks and feathery leaves.</p>
+        </div>
+        <div class="card" id="fig">
+          <span class="count">1,334 spots</span>
+          <h3>Fig</h3>
+          <div class="sci">Ficus carica</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe from late summer into autumn. Some trees also give a small early crop in early summer.</p>
+          <p><strong>Tip:</strong> Pick when fruit hangs slightly limp, feels soft, and the skin may show slight splitting or drooping.</p>
+        </div>
+        <div class="card" id="fingerlime">
+          <span class="count">82 spots</span>
+          <h3>Finger Lime</h3>
+          <div class="sci">Citrus australasica</div>
+          <p class="when"><strong>Summer, Autumn and Winter:</strong> Ripe from late summer to winter, varying between trees.</p>
+          <p><strong>Tip:</strong> Finger limes are ripe when they feel slightly soft to the touch, have a subtle sheen on the skin, emit a pleasant citrus aroma, and detach easily from the tree.</p>
+        </div>
+        <div class="card" id="goldkiwifruit">
+          <span class="count">35 spots</span>
+          <h3>Gold Kiwifruit</h3>
+          <div class="sci">Actinidia chinensis</div>
+          <p class="when"><strong>Autumn and Winter:</strong> Ripe in autumn to early winter, picked a little earlier than green kiwifruit.</p>
+          <p><strong>Tip:</strong> Harvest when the fruit is full-sized and slightly soft at the stem end, but still firm overall.</p>
+        </div>
+        <div class="card" id="gooseberry">
+          <span class="count">104 spots</span>
+          <h3>Gooseberry</h3>
+          <div class="sci">Ribes</div>
+          <p class="when"><strong>Summer:</strong> Ripe in early to mid summer.</p>
+          <p><strong>Tip:</strong> Gooseberries can be picked slightly underripe when firm and green for cooking, or left on the bush until they develop their full colour (green, yellow, red, or purple depending on the variety) and become slightly soft for eating fresh.</p>
+        </div>
+        <div class="card" id="grape">
+          <span class="count">190 spots</span>
+          <h3>Grape</h3>
+          <div class="sci">Vitis vinifera</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe from late summer to autumn, depending on the variety.</p>
+          <p><strong>Tip:</strong> Harvest when berries are fully coloured, sweet, and easily detach from the stem.</p>
+        </div>
+        <div class="card" id="grapefruit">
+          <span class="count">141 spots</span>
+          <h3>Grapefruit</h3>
+          <div class="sci">Citrus paradisi</div>
+          <p class="when"><strong>Spring and Winter:</strong> Ripe from winter through spring and holds well on the tree.</p>
+          <p><strong>Tip:</strong> Pick when fruit is fully coloured, heavy, and slightly springy when pressed.</p>
+        </div>
+        <div class="card" id="guava">
+          <span class="count">187 spots</span>
+          <h3>Guava</h3>
+          <div class="sci">Psidium guajava</div>
+          <p class="when"><strong>Summer, Autumn and Winter:</strong> Ripe from late summer into winter, with some fruit at other times in the tropics.</p>
+          <p><strong>Tip:</strong> Pick when fruit gives slightly to pressure and emits a strong sweet fragrance.</p>
+        </div>
+        <div class="card" id="hazelnut">
+          <span class="count">91 spots</span>
+          <h3>Hazelnut</h3>
+          <div class="sci">Corylus americana</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe in late summer to early autumn, when the husks brown and nuts drop.</p>
+          <p><strong>Tip:</strong> Hazelnuts are ready to harvest in late summer to early autumn when the husks turn from green to yellow-brown and the nuts begin dropping naturally from the tree.</p>
+        </div>
+        <div class="card" id="jackfruit">
+          <span class="count">26 spots</span>
+          <h3>Jackfruit</h3>
+          <div class="sci">Artocarpus heterophyllus</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe in summer to autumn, sometimes a second smaller crop.</p>
+          <p><strong>Tip:</strong> Harvest when the fruit develops a strong aroma, dull green-to-yellowing skin, and slight softening with spines flattening.</p>
+        </div>
+        <div class="card" id="japanesewalnut">
+          <span class="count">42 spots</span>
+          <h3>Japanese Walnut</h3>
+          <div class="sci">Juglans ailantifolia</div>
+          <p class="when"><strong>Autumn:</strong> Nuts fall in autumn.</p>
+          <p><strong>Tip:</strong> Ready to pick when the fuzzy, sticky husk shifts from green to a yellowish-brown and softens, usually still hanging in its distinctive cluster of several nuts.</p>
+        </div>
+        <div class="card" id="kiwifruit">
+          <span class="count">31 spots</span>
+          <h3>Kiwifruit</h3>
+          <div class="sci">Actinidia chinensis var. deliciosa</div>
+          <p class="when"><strong>Autumn:</strong> Ripe in late autumn. Fruit is picked firm and softens off the vine.</p>
+          <p><strong>Tip:</strong> Kiwifruit are typically picked in late autumn when they are full-sized but still firm, and the seeds are black and fully developed inside.</p>
+        </div>
+        <div class="card" id="kumquat">
+          <span class="count">23 spots</span>
+          <h3>Kumquat</h3>
+          <div class="sci">Citrus japonica</div>
+          <p class="when"><strong>Spring and Winter:</strong> Ripe in winter to spring.</p>
+          <p><strong>Tip:</strong> Harvest when the skin is fully orange and slightly glossy, and the fruit feels just a little soft.</p>
+        </div>
+        <div class="card" id="lemon">
+          <span class="count">1,506 spots</span>
+          <h3>Lemon</h3>
+          <div class="sci">Citrus limon</div>
+          <p class="when"><strong>Spring and Winter:</strong> Fruits most of the year, with the main crop in winter to spring.</p>
+          <p><strong>Tip:</strong> A lemon is ripe when it has a bright yellow color, feels firm with a slight give, emits a strong citrus aroma, and is heavy for its size.</p>
+        </div>
+        <div class="card" id="lime">
+          <span class="count">158 spots</span>
+          <h3>Lime</h3>
+          <div class="sci">Citrus × latifolia, C. aurantiifolia</div>
+          <p class="when"><strong>Summer, Autumn and Winter:</strong> Ripe from late summer into winter, with some fruit at other times.</p>
+          <p><strong>Tip:</strong> A lime is ripe when it feels heavy, slightly soft to the touch, has smooth, glossy skin, and emits a fresh, zesty aroma, with colour ranging from vibrant green to slightly yellow depending on the variety.</p>
+        </div>
+        <div class="card" id="loquat">
+          <span class="count">1,866 spots</span>
+          <h3>Loquat</h3>
+          <div class="sci">Eriobotrya japonica</div>
+          <p class="when"><strong>Spring and Winter:</strong> Ripe in late winter to spring, one of the first fruits of the year.</p>
+          <p><strong>Tip:</strong> Pick when fruit is fully yellow-orange, fragrant, and slightly soft to the touch.</p>
+        </div>
+        <div class="card" id="macadamia">
+          <span class="count">359 spots</span>
+          <h3>Macadamia</h3>
+          <div class="sci">Macadamia integrifolia</div>
+          <p class="when"><strong>Summer, Autumn and Winter:</strong> Nuts fall mainly from late summer to winter.</p>
+          <p><strong>Tip:</strong> Harvest when nuts drop naturally or husks split open on the tree.</p>
+        </div>
+        <div class="card" id="mandarin">
+          <span class="count">238 spots</span>
+          <h3>Mandarin</h3>
+          <div class="sci">Citrus reticulata</div>
+          <p class="when"><strong>Autumn and Winter:</strong> Ripe in late autumn through winter, depending on the variety.</p>
+          <p><strong>Tip:</strong> Pick when fruit is fully orange, fragrant, and slightly soft with a heavy feel.</p>
+        </div>
+        <div class="card" id="mango">
+          <span class="count">535 spots</span>
+          <h3>Mango</h3>
+          <div class="sci">Mangifera indica</div>
+          <p class="when"><strong>Spring and Summer:</strong> Ripe from late spring to late summer, starting earlier in the tropics than in subtropical areas.</p>
+          <p><strong>Tip:</strong> Harvest when the fruit reaches full size and starts to show colour change or a slight yellow blush, depending on variety.</p>
+        </div>
+        <div class="card" id="mint">
+          <span class="count">154 spots</span>
+          <h3>Mint</h3>
+          <div class="sci">Mentha spicata</div>
+          <p class="when"><strong>Spring, Summer and Autumn:</strong> Leaves can be picked from spring to autumn; it dies back in cold winters.</p>
+          <p><strong>Tip:</strong> The leaf, fresh or dried, is the culinary source of mint.</p>
+        </div>
+        <div class="card" id="mulberry">
+          <span class="count">132 spots</span>
+          <h3>Mulberry</h3>
+          <div class="sci">Morus alba</div>
+          <p class="when"><strong>Spring and Summer:</strong> Ripe from late spring into summer.</p>
+          <p><strong>Tip:</strong> Harvest when berries are fully dark purple-black (or deep red depending on variety) and fall easily with a gentle touch.</p>
+        </div>
+        <div class="card" id="nashipear">
+          <span class="count">44 spots</span>
+          <h3>Nashi/Asian Pear</h3>
+          <div class="sci">Pyrus pyrifolia</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe in late summer to early autumn. Ripens on the tree and is eaten crisp.</p>
+          <p><strong>Tip:</strong> Nashi pears are ready to pick when they reach full size and their skin colour shifts slightly toward a golden-yellow (depending on variety), often with a sweet fragrance developing.</p>
+        </div>
+        <div class="card" id="nectarine">
+          <span class="count">21 spots</span>
+          <h3>Nectarine</h3>
+          <div class="sci">Prunus persica var. nucipersica</div>
+          <p class="when"><strong>Summer:</strong> Ripe from early to late summer, depending on the variety.</p>
+          <p><strong>Tip:</strong> Harvest when fruit is fully coloured, fragrant, and slightly soft near the stem.</p>
+        </div>
+        <div class="card" id="olive">
+          <span class="count">42 spots</span>
+          <h3>Olive</h3>
+          <div class="sci">Olea europaea</div>
+          <p class="when"><strong>Summer, Autumn and Winter:</strong> Green olives can be picked in late summer; fully ripe black olives in late autumn to winter. Cure before eating.</p>
+          <p><strong>Tip:</strong> Pick depending on use: green for firmer, bitter olives or black/purple for fully ripened fruit with richer oil content.</p>
+        </div>
+        <div class="card" id="orange">
+          <span class="count">318 spots</span>
+          <h3>Orange</h3>
+          <div class="sci">Citrus sinensis</div>
+          <p class="when"><strong>Spring, Summer and Winter:</strong> Navel oranges ripen in winter; Valencia oranges in spring to summer. Fruit holds well on the tree.</p>
+          <p><strong>Tip:</strong> Pick when fruit is fully coloured, heavy, and slightly springy when squeezed.</p>
+        </div>
+        <div class="card" id="oregano">
+          <span class="count">32 spots</span>
+          <h3>Oregano</h3>
+          <div class="sci">Origanum vulgare</div>
+          <p class="when"><strong>Spring, Summer and Autumn:</strong> Leaves can be picked from spring to autumn, with the best flavour just before flowering in summer.</p>
+          <p><strong>Tip:</strong> For the best flavour, pick the top 5–10 cm of the plant before it flowers.</p>
+        </div>
+        <div class="card" id="papaya">
+          <span class="count">61 spots</span>
+          <h3>Papaya</h3>
+          <div class="sci">Carica papaya</div>
+          <p class="when"><strong>Spring, Summer, Autumn and Winter:</strong> Fruits year-round in warm climates, most heavily in summer and autumn.</p>
+          <p><strong>Tip:</strong> Harvest when skin begins turning yellow-orange and fruit softens slightly at the blossom end.</p>
+        </div>
+        <div class="card" id="passionfruit">
+          <span class="count">1,140 spots</span>
+          <h3>Passionfruit</h3>
+          <div class="sci">Passiflora edulis</div>
+          <p class="when"><strong>Spring, Summer and Autumn:</strong> Main crop in summer to autumn, often a smaller crop in spring. Ripe when it falls or the skin wrinkles.</p>
+          <p><strong>Tip:</strong> Pick when fruit changes from green to deep purple or yellow and often falls from the vine naturally.</p>
+        </div>
+        <div class="card" id="peach">
+          <span class="count">1,073 spots</span>
+          <h3>Peach</h3>
+          <div class="sci">Prunus persica</div>
+          <p class="when"><strong>Summer:</strong> Ripe from early to late summer, depending on the variety.</p>
+          <p><strong>Tip:</strong> Harvest when fruit is fully coloured, fragrant, and slightly soft around the stem.</p>
+        </div>
+        <div class="card" id="pear">
+          <span class="count">559 spots</span>
+          <h3>Pear</h3>
+          <div class="sci">Pyrus</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe from late summer through autumn. European pears are picked firm and ripened off the tree.</p>
+          <p><strong>Tip:</strong> Most European pears (like Packham or Bartlett) are picked when mature but still firm, often while still green, and then ripened off the tree until they soften around the neck first.</p>
+        </div>
+        <div class="card" id="pecan">
+          <span class="count">60 spots</span>
+          <h3>Pecan</h3>
+          <div class="sci">Carya illinoinensis</div>
+          <p class="when"><strong>Autumn:</strong> Nuts fall in late autumn when the husks split.</p>
+          <p><strong>Tip:</strong> Harvest when the husks split open and nuts drop naturally or shake loose easily.</p>
+        </div>
+        <div class="card" id="peppermint">
+          <span class="count">90 spots</span>
+          <h3>Peppermint</h3>
+          <div class="sci">Mentha x piperita</div>
+          <p class="when"><strong>Spring, Summer and Autumn:</strong> Leaves can be picked from spring to autumn; it dies back in cold winters.</p>
+          <p><strong>Tip:</strong> The primary parts of the peppermint plant used are the leaves, flowers, and essential oil, which are utilized for culinary, medicinal, and aromatic purposes.</p>
+        </div>
+        <div class="card" id="persimmon">
+          <span class="count">110 spots</span>
+          <h3>Persimmon</h3>
+          <div class="sci">Diospyros kaki</div>
+          <p class="when"><strong>Autumn:</strong> Ripe in autumn, usually after the leaves start colouring and dropping.</p>
+          <p><strong>Tip:</strong> Pick when fruit is fully coloured and starting to soften, but still holds its shape—unless it’s a astringent type, which should be left until very soft.</p>
+        </div>
+        <div class="card" id="pinenut">
+          <span class="count">279 spots</span>
+          <h3>Pinenut</h3>
+          <div class="sci">Pinus</div>
+          <p class="when"><strong>Autumn:</strong> Cones ripen in autumn and open as they dry.</p>
+          <p><strong>Tip:</strong> Pick mature cones before they fully open and lose their seeds, then dry them in a warm, airy place until the scales open and the nuts can be removed.</p>
+        </div>
+        <div class="card" id="plum">
+          <span class="count">1,226 spots</span>
+          <h3>Plum</h3>
+          <div class="sci">Prunus domestica</div>
+          <p class="when"><strong>Summer and Autumn:</strong> Ripe from mid summer into early autumn, depending on the variety.</p>
+          <p><strong>Tip:</strong> Harvest when fruit is fully coloured, fragrant, and slightly soft near the stem.</p>
+        </div>
+        <div class="card" id="pomegranate">
+          <span class="count">214 spots</span>
+          <h3>Pomegranate</h3>
+          <div class="sci">Punica granatum</div>
+          <p class="when"><strong>Autumn:</strong> Ripe in autumn.</p>
+          <p><strong>Tip:</strong> Pomegranates are typically ready to harvest in late autumn when the skin deepens to a rich red (or yellow-red depending on variety), becomes slightly matte rather than glossy, and the fruit feels heavy for its size.</p>
+        </div>
+        <div class="card" id="quince">
+          <span class="count">154 spots</span>
+          <h3>Quince</h3>
+          <div class="sci">Cydonia oblonga</div>
+          <p class="when"><strong>Autumn:</strong> Ripe in autumn, when the fruit turns fully yellow and fragrant. Usually cooked.</p>
+          <p><strong>Tip:</strong> Harvest when fruit turns fully yellow and develops a strong floral aroma.</p>
+        </div>
+        <div class="card" id="rosemary">
+          <span class="count">577 spots</span>
+          <h3>Rosemary</h3>
+          <div class="sci">Salvia rosmarinus</div>
+          <p class="when"><strong>Spring and Winter:</strong> Leaves can be picked all year round. Flowers mostly in winter and spring.</p>
+          <p><strong>Tip:</strong> The edible parts of rosemary include the leaves, flowers, and young tender stems, with leaves being the most commonly used in cooking.</p>
+        </div>
+        <div class="card" id="sage">
+          <span class="count">31 spots</span>
+          <h3>Sage</h3>
+          <div class="sci">Salvia officinalis</div>
+          <p class="when"><strong>Spring, Summer, Autumn and Winter:</strong> Leaves can be picked all year, with the most growth in spring and summer.</p>
+          <p><strong>Tip:</strong> The herb is soft in texture, almost like felt or velvet.</p>
+        </div>
+        <div class="card" id="serviceberry">
+          <span class="count">125 spots</span>
+          <h3>Serviceberry</h3>
+          <div class="sci">Amelanchier canadensis</div>
+          <p class="when"><strong>Summer:</strong> Ripe in early summer.</p>
+          <p><strong>Tip:</strong> Pick when berries are fully purple-blue to dark red (depending on species) and soft with a sweet flavour.</p>
+        </div>
+        <div class="card" id="sourcherry">
+          <span class="count">36 spots</span>
+          <h3>Sour Cherry</h3>
+          <div class="sci">Prunus cerasus</div>
+          <p class="when"><strong>Summer:</strong> Ripe in early to mid summer.</p>
+          <p><strong>Tip:</strong> Harvest when fruit is fully red and juicy, slightly soft but still firm enough to hold shape.</p>
+        </div>
+        <div class="card" id="strawberry">
+          <span class="count">40 spots</span>
+          <h3>Strawberry</h3>
+          <div class="sci">Fragaria x ananassa</div>
+          <p class="when"><strong>Spring and Summer:</strong> Ripe from late spring through summer.</p>
+          <p><strong>Tip:</strong> Harvest when fully red, glossy, and evenly coloured with no white or green shoulders.</p>
+        </div>
+        <div class="card" id="tamarillo">
+          <span class="count">56 spots</span>
+          <h3>Tamarillo</h3>
+          <div class="sci">Solanum betaceum</div>
+          <p class="when"><strong>Autumn and Winter:</strong> Ripe in late autumn to winter.</p>
+          <p><strong>Tip:</strong> Pick when fruit is fully coloured (red, orange, or purple depending on variety) and slightly soft.</p>
+        </div>
+        <div class="card" id="tamarind">
+          <span class="count">74 spots</span>
+          <h3>Tamarind</h3>
+          <div class="sci">Tamarindus indica</div>
+          <p class="when"><strong>Spring and Winter:</strong> Pods ripen in late winter to spring and can stay on the tree for weeks.</p>
+          <p><strong>Tip:</strong> Harvest when pods are brown, brittle, and dry on the outside, with pulp pulling away from the shell.</p>
+        </div>
+        <div class="card" id="thyme">
+          <span class="count">75 spots</span>
+          <h3>Thyme</h3>
+          <div class="sci">Thymus vulgaris</div>
+          <p class="when"><strong>Spring, Summer, Autumn and Winter:</strong> Leaves can be picked all year round, with the most growth in spring and summer.</p>
+          <p><strong>Tip:</strong> The leaves are the most commonly used part in cooking, offering an earthy, slightly floral flavour with hints of lemon and mint.</p>
+        </div>
+        <div class="card" id="walnut">
+          <span class="count">737 spots</span>
+          <h3>Walnut</h3>
+          <div class="sci">Juglans regia</div>
+          <p class="when"><strong>Autumn:</strong> Nuts fall in autumn when the green husks split.</p>
+          <p><strong>Tip:</strong> Walnuts are typically ripe when the hulls start to split open and the nuts fall to the ground.</p>
+        </div>
+        <div class="card" id="whitemulberry">
+          <span class="count">1,443 spots</span>
+          <h3>White Mulberry</h3>
+          <div class="sci">Morus alba</div>
+          <p class="when"><strong>Spring and Summer:</strong> Ripe from late spring into summer.</p>
+          <p><strong>Tip:</strong> Pick when the fruit turns creamy white to pale pink (depending on the variety), becomes soft, and tastes sweet rather than tart.</p>
+        </div>
+        <div class="card" id="whitesapote">
+          <span class="count">35 spots</span>
+          <h3>White Sapote</h3>
+          <div class="sci">Casimiroa edulis</div>
+          <p class="when"><strong>Spring, Autumn and Winter:</strong> Ripe in late autumn to spring.</p>
+          <p><strong>Tip:</strong> Pick white sapote when the fruit is full-sized and begins to soften slightly or can be detached with a gentle lift.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Questions</h2>
+      <h3>What fruit is in season in New Zealand and Australia right now?</h3>
+      <p>Check the season highlighted at the top of this page. In spring look for loquats, mulberries and the first citrus; in summer, cherry plums, stone fruit, blackberries and passionfruit; in autumn, feijoas, apples, figs, walnuts and chestnuts; and in winter, citrus such as lemons, mandarins and oranges.</p>
+      <h3>When are feijoas in season?</h3>
+      <p>Feijoas are an autumn fruit in most of New Zealand and southern Australia, roughly March to May. In warmer places the season can run from late summer into winter.</p>
+      <h3>Do seasons differ between cities?</h3>
+      <p>Yes. Fruit ripens earlier in warmer places like Brisbane, Perth and Auckland than in Melbourne, Christchurch or Dunedin, and the tropical north follows wet and dry seasons instead. Ripeness updates from local foragers in the Local Pick app show what’s ready near you.</p>
+      <h3 style="margin-top:24px">Foraging by city</h3>
+      <ul class="chips"><li><a href="/foraging/auckland">Auckland</a></li><li><a href="/foraging/wellington">Wellington</a></li><li><a href="/foraging/christchurch">Christchurch</a></li><li><a href="/foraging/hamilton">Hamilton</a></li><li><a href="/foraging/tauranga">Tauranga</a></li><li><a href="/foraging/dunedin">Dunedin</a></li><li><a href="/foraging/nelson">Nelson</a></li><li><a href="/foraging/napier-hastings">Napier and Hastings</a></li><li><a href="/foraging/rotorua">Rotorua</a></li><li><a href="/foraging/queenstown">Queenstown</a></li><li><a href="/foraging/sydney">Sydney</a></li><li><a href="/foraging/melbourne">Melbourne</a></li><li><a href="/foraging/brisbane">Brisbane</a></li><li><a href="/foraging/perth">Perth</a></li><li><a href="/foraging/adelaide">Adelaide</a></li><li><a href="/foraging/canberra">Canberra</a></li><li><a href="/foraging/gold-coast">Gold Coast</a></li><li><a href="/foraging/newcastle">Newcastle</a></li><li><a href="/foraging/geelong">Geelong</a></li><li><a href="/foraging/ballarat">Ballarat</a></li><li><a href="/foraging/bendigo">Bendigo</a></li><li><a href="/foraging/launceston">Launceston</a></li></ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <h2>Find them on the map</h2>
+        <p>Local Pick shows every spot on a live map, with ripeness updates from local foragers, photos and ratings. It’s free.</p>
+        <div class="row">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.localpick.app" target="_blank" rel="noopener">Get it on Google Play</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<script>
+  (function () {
+    var m = new Date().getMonth();
+    var s = m >= 8 && m <= 10 ? 'spring' : (m === 11 || m <= 1) ? 'summer' : m <= 4 ? 'autumn' : 'winter';
+    document.querySelectorAll('.season[data-season="' + s + '"]').forEach(function (el) { el.classList.add('now'); });
+  })();
+</script>
+</main>
+<footer>
+  <div class="wrap">
+    <p><a href="/">Local Pick</a> &middot; <a href="/foraging/">Foraging by city</a> &middot; <a href="/in-season">What’s in season</a> &middot; <a href="/#faq">FAQ</a></p>
+    <p>Follow Local Pick: <a href="https://www.instagram.com/localpickapp/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/yourlocalpickapp" target="_blank" rel="noopener">Facebook</a> &middot; <a href="mailto:hello@local-pick.com">hello@local-pick.com</a></p>
+    <p>&copy; 2026 Local Pick &middot; <a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms of Service</a></p>
+  </div>
+</footer>
+</body>
+</html>
