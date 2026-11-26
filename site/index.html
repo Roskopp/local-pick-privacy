@@ -206,9 +206,9 @@
   .shot-card p{color:var(--muted); font-size:13.5px; max-width:220px; margin:0 auto;}
 
   /* ---- On the map ---- */
-  .stats-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:28px;}
-  .stat{background:var(--card); border-radius:var(--radius-md); padding:20px; box-shadow:var(--shadow); text-align:center;}
-  .stat b{display:block; font-family:'Sora',sans-serif; font-weight:800; font-size:30px; color:var(--green); line-height:1.1;}
+  .stats-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:28px;}
+  .stat{background:var(--card); border-radius:var(--radius-md); padding:20px 12px; box-shadow:var(--shadow); text-align:center;}
+  .stat b{display:block; font-family:'Sora',sans-serif; font-weight:800; font-size:clamp(22px, 6.5vw, 30px); color:var(--green); line-height:1.1;}
   .stat span{color:var(--muted); font-size:14px;}
   .finds{margin:26px auto 0; max-width:760px; text-align:center; color:var(--muted); font-size:15px;}
   .finds strong{color:var(--green-dark);}
