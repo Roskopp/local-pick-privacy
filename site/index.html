@@ -16,13 +16,14 @@
   })();
 </script>
 <title>Local Pick — Free Foraging Map: Find Fruit Trees Near You</title>
-<meta name="description" content="Find free fruit trees, nut trees, herbs and drinking water near you. Local Pick is a free community foraging map with over 140,000 spots worldwide, showing what’s ripe right now.">
+<meta name="description" content="Find free fruit trees, nut trees, herbs and drinking water near you. Local Pick is a free community foraging app for iPhone and Android with over 140,000 spots worldwide, showing what’s ripe right now.">
+<meta name="apple-itunes-app" content="app-id=6831013392">
 <link rel="canonical" href="https://local-pick.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Local Pick">
 <meta property="og:url" content="https://local-pick.com/">
 <meta property="og:title" content="Local Pick — Find free fruit, nuts &amp; herbs near you">
-<meta property="og:description" content="A community-powered foraging map: discover edible plants nearby and see what's actually ripe right now. Free on Google Play.">
+<meta property="og:description" content="A community-powered foraging map: discover edible plants nearby and see what's actually ripe right now. Free on iPhone and Android.">
 <meta property="og:image" content="https://local-pick.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -340,11 +341,14 @@
   {
    "@type": "MobileApplication",
    "name": "Local Pick",
-   "operatingSystem": "Android",
+   "operatingSystem": "Android, iOS",
    "applicationCategory": "LifestyleApplication",
    "description": "A community foraging map of fruit trees, nut trees, herbs and drinking water around the world, showing what’s ripe right now.",
    "url": "https://local-pick.com/",
-   "downloadUrl": "https://play.google.com/store/apps/details?id=com.localpick.app",
+   "downloadUrl": [
+   "https://play.google.com/store/apps/details?id=com.localpick.app",
+   "https://apps.apple.com/app/id6831013392"
+  ],
    "image": "https://local-pick.com/assets/og-image.png",
    "offers": {
     "@type": "Offer",
@@ -430,7 +434,7 @@
       <a href="#features">Features</a>
       <a href="/in-season">In season</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.localpick.app" target="_blank" rel="noopener">Get the app</a>
+      <a class="btn btn-primary btn-sm" id="nav-get-app" href="https://play.google.com/store/apps/details?id=com.localpick.app" target="_blank" rel="noopener">Get the app</a>
     </nav>
   </div>
 </header>
@@ -452,26 +456,12 @@
           <svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true"><path d="M1.2.6C.9.9.7 1.4.7 2v24c0 .6.2 1.1.5 1.4l.1.1L14.7 14.1v-.3L1.3.5z" fill="#00D7FE"/><path d="M19.2 18.6l-4.5-4.5v-.3l4.5-4.5.1.1 5.3 3c1.5.9 1.5 2.3 0 3.2l-5.3 3z" fill="#FFCE00"/><path d="M19.3 18.5L14.7 14 1.2 27.4c.5.5 1.3.6 2.2.1l15.9-9" fill="#FF3A44"/><path d="M19.3 9.5L3.4.5C2.5 0 1.7.1 1.2.6L14.7 14z" fill="#00F076"/></svg>
           <span><small>GET IT ON</small>Google Play</span>
         </a>
-        <div class="play-btn appstore-soon" role="img" aria-label="Coming soon to the App Store">
+        <a class="play-btn" href="https://apps.apple.com/app/id6831013392" target="_blank" rel="noopener" aria-label="Download Local Pick on the App Store">
           <svg width="24" height="28" viewBox="0 0 384 512" aria-hidden="true"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-          <span><small>COMING SOON TO THE</small>App Store</span>
-        </div>
+          <span><small>DOWNLOAD ON THE</small>App Store</span>
+        </a>
       </div>
 
-      <div class="signup" id="notify">
-        <button type="button" class="notify-toggle" id="notify-toggle" aria-expanded="false" aria-controls="notify-form">On iPhone? Get an email when it’s on the App Store</button>
-        <form id="notify-form" hidden name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="notify">
-          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-          <div class="signup-row">
-            <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
-            <button class="btn btn-primary" type="submit">Notify me</button>
-          </div>
-          <p class="signup-error" id="notify-error" role="alert">Sorry, that didn’t go through. Please check your connection and try again.</p>
-          <p class="signup-note">We’ll email you once when Local Pick is on the App Store. No spam.</p>
-        </form>
-        <div class="signup-success" id="notify-success">You're on the list — we'll email you when Local Pick is on the App Store. 🌿</div>
-      </div>
       </div>
       <div class="hero-shot">
         <div class="shot-frame"><img src="/assets/shot-map.webp" width="500" height="875" alt="The Local Pick map showing fruit trees and drinking water nearby" fetchpriority="high"></div>
@@ -633,10 +623,10 @@
           <svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true"><path d="M1.2.6C.9.9.7 1.4.7 2v24c0 .6.2 1.1.5 1.4l.1.1L14.7 14.1v-.3L1.3.5z" fill="#00D7FE"/><path d="M19.2 18.6l-4.5-4.5v-.3l4.5-4.5.1.1 5.3 3c1.5.9 1.5 2.3 0 3.2l-5.3 3z" fill="#FFCE00"/><path d="M19.3 18.5L14.7 14 1.2 27.4c.5.5 1.3.6 2.2.1l15.9-9" fill="#FF3A44"/><path d="M19.3 9.5L3.4.5C2.5 0 1.7.1 1.2.6L14.7 14z" fill="#00F076"/></svg>
           <span><small>GET IT ON</small>Google Play</span>
         </a>
-        <div class="play-btn appstore-soon" role="img" aria-label="Coming soon to the App Store">
+        <a class="play-btn" href="https://apps.apple.com/app/id6831013392" target="_blank" rel="noopener" aria-label="Download Local Pick on the App Store">
           <svg width="24" height="28" viewBox="0 0 384 512" aria-hidden="true"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-          <span><small>COMING SOON TO THE</small>App Store</span>
-        </div>
+          <span><small>DOWNLOAD ON THE</small>App Store</span>
+        </a>
       </div>
     </div>
   </section>
@@ -653,36 +643,15 @@
 </footer>
 
 <script>
-  var form = document.getElementById('notify-form');
-  var success = document.getElementById('notify-success');
-  var error = document.getElementById('notify-error');
-  var button = form.querySelector('button[type="submit"]');
-  var toggle = document.getElementById('notify-toggle');
-  toggle.addEventListener('click', function () {
-    form.hidden = false;
-    toggle.hidden = true;
-    toggle.setAttribute('aria-expanded', 'true');
-    form.querySelector('input[type="email"]').focus();
-  });
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    error.classList.remove('show');
-    button.disabled = true;
-    var data = new FormData(form);
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString()
-    }).then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      form.style.display = 'none';
-      success.classList.add('show');
-    }).catch(function () {
-      // Keep what they typed and let them try again.
-      error.classList.add('show');
-      button.disabled = false;
-    });
-  });
+  // "Get the app" in the nav: send iPhone/iPad visitors to the App Store
+  // instead of Google Play.
+  (function () {
+    var ios = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (ios) {
+      document.getElementById('nav-get-app').href = 'https://apps.apple.com/app/id6831013392';
+    }
+  })();
 </script>
 
 </body>

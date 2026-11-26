@@ -18,7 +18,7 @@ const SITE = path.join(REPO, 'site');
 const SUPABASE_WORKDIR = path.resolve(REPO, '..', 'fruit_map'); // holds supabase/ (linked project)
 const ORIGIN = 'https://local-pick.com';
 const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.localpick.app';
-const APP_STORE_URL = null; // set to 'https://apps.apple.com/app/id6831013392' once the iPhone app is live
+const APP_STORE_URL = 'https://apps.apple.com/app/id6831013392'; // iPhone app is live
 const MIN_SPOTS = 25;       // plants with fewer spots on the map are left out of the guide
 
 // ---------------------------------------------------------------- data
