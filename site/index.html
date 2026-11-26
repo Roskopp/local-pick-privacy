@@ -114,7 +114,7 @@
 
   /* ---- Hero ---- */
   .hero{padding:48px 0 56px; overflow:hidden;}
-  .hero-grid{display:grid; grid-template-columns:1fr; gap:36px; align-items:center;}
+  .hero-grid{display:grid; grid-template-columns:minmax(0,1fr); gap:36px; align-items:center;}
   .hero-copy{display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px;}
   .hero h1{font-size:46px; max-width:720px; margin:0;}
   .hero .tagline{font-size:18px; color:var(--muted); max-width:560px; margin:0;}
@@ -175,6 +175,8 @@
   .play-btn span{display:flex; flex-direction:column; text-align:left; font-family:'Sora',sans-serif; font-weight:600; font-size:20px; line-height:1.1;}
   .play-btn small{font-family:'Work Sans',sans-serif; font-weight:500; font-size:10.5px; letter-spacing:.06em; opacity:.85;}
   .store-row{align-items:center;}
+  .appstore-soon{cursor:default;}
+  .appstore-soon:hover{background:#111; transform:none;}
 
   /* ---- About ---- */
   .about{max-width:760px; margin:0 auto; text-align:center;}
@@ -283,8 +285,10 @@
     .about h2, #features h2, #screenshots h2{font-size:26px !important;}
     .store-row{gap:10px; flex-wrap:nowrap;}
     .store-pill{padding:8px 12px; gap:8px;}
-    .play-btn{padding:9px 16px 9px 14px;}
-    .play-btn span{font-size:17px;}
+    .play-btn{padding:9px 14px 9px 12px; gap:9px;}
+    .play-btn svg{width:20px; height:22px;}
+    .play-btn span{font-size:15.5px; white-space:nowrap;}
+    .play-btn small{font-size:9px;}
     .feature-card{padding:18px;}
     .shot-frame{border-width:4px; border-radius:20px; margin-bottom:12px;}
     .shot-card h3{font-size:14px;}
@@ -301,6 +305,10 @@
     .hero-copy{align-items:flex-start; text-align:left;}
     .hero .store-row{justify-content:flex-start;}
     .hero .signup{align-items:flex-start;}
+  }
+  @media(max-width:360px){
+    .store-row{gap:8px; flex-wrap:wrap !important;}
+    .play-btn{padding:8px 12px 8px 10px; gap:8px;}
   }
 </style>
 <script type="application/ld+json">
@@ -444,8 +452,9 @@
           <svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true"><path d="M1.2.6C.9.9.7 1.4.7 2v24c0 .6.2 1.1.5 1.4l.1.1L14.7 14.1v-.3L1.3.5z" fill="#00D7FE"/><path d="M19.2 18.6l-4.5-4.5v-.3l4.5-4.5.1.1 5.3 3c1.5.9 1.5 2.3 0 3.2l-5.3 3z" fill="#FFCE00"/><path d="M19.3 18.5L14.7 14 1.2 27.4c.5.5 1.3.6 2.2.1l15.9-9" fill="#FF3A44"/><path d="M19.3 9.5L3.4.5C2.5 0 1.7.1 1.2.6L14.7 14z" fill="#00F076"/></svg>
           <span><small>GET IT ON</small>Google Play</span>
         </a>
-        <div class="store-pill">
-          <div><strong>App Store</strong>Coming soon</div>
+        <div class="play-btn appstore-soon" role="img" aria-label="Coming soon to the App Store">
+          <svg width="24" height="28" viewBox="0 0 384 512" aria-hidden="true"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span><small>COMING SOON TO THE</small>App Store</span>
         </div>
       </div>
 
@@ -624,8 +633,9 @@
           <svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true"><path d="M1.2.6C.9.9.7 1.4.7 2v24c0 .6.2 1.1.5 1.4l.1.1L14.7 14.1v-.3L1.3.5z" fill="#00D7FE"/><path d="M19.2 18.6l-4.5-4.5v-.3l4.5-4.5.1.1 5.3 3c1.5.9 1.5 2.3 0 3.2l-5.3 3z" fill="#FFCE00"/><path d="M19.3 18.5L14.7 14 1.2 27.4c.5.5 1.3.6 2.2.1l15.9-9" fill="#FF3A44"/><path d="M19.3 9.5L3.4.5C2.5 0 1.7.1 1.2.6L14.7 14z" fill="#00F076"/></svg>
           <span><small>GET IT ON</small>Google Play</span>
         </a>
-        <div class="store-pill">
-          <div><strong>App Store</strong>Coming soon</div>
+        <div class="play-btn appstore-soon" role="img" aria-label="Coming soon to the App Store">
+          <svg width="24" height="28" viewBox="0 0 384 512" aria-hidden="true"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span><small>COMING SOON TO THE</small>App Store</span>
         </div>
       </div>
     </div>
