@@ -1,0 +1,3 @@
+# The per-city foraging pages were removed on 2026-11-26; send old links home.
+/foraging      /  301
+/foraging/*    /  301
